@@ -54,8 +54,8 @@ Add this to your HTML `<head>`:
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/glowdown-js/ultra-css/ultra.min.css">
 ```
-Or for production use
+Or for production use , add in your html `<head>` :
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/glowdown-js/ultra-css/ultra.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/glowdown-js/ultra-css/ultra.css">
 ```
 
