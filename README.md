@@ -1,12 +1,13 @@
-# 🚀 Ultra Good CSS Framework
+# 🚀 Ultra CSS
 
 > **Classless CSS Framework with Glassmorphism, Dark/Light Mode & 2000+ Lines of Pure CSS**
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-[![CDN](https://img.shields.io/badge/CDN-jsDelivr-orange)](https://cdn.jsdelivr.net/gh/YOUR_USERNAME/ultra-good-css/ultra-good.css)
-[![CSS](https://img.shields.io/badge/CSS-2000%2B%20lines-purple)](https://github.com/YOUR_USERNAME/ultra-good-css)
-[![Theme](https://img.shields.io/badge/Theme-Dark%2FLight-brightgreen)](https://github.com/YOUR_USERNAME/ultra-good-css)
+[![CDN](https://img.shields.io/badge/CDN-jsDelivr-orange)](https://cdn.jsdelivr.net/gh/glowdown-js/ultra-css/ultra.css)
+[![CSS](https://img.shields.io/badge/CSS-2000%2B%20lines-purple)](https://github.com/glowdown-js/ultra-css)
+[![Theme](https://img.shields.io/badge/Theme-Dark%2FLight-brightgreen)](https://github.com/glowdown-js/ultra-css)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![Size](https://img.shields.io/badge/Size-~15KB%20minified-success)](https://github.com/glowdown-js/ultra-css)
 
 ---
 
@@ -35,11 +36,12 @@
 - 📱 **Fully Responsive** — Works on all devices from mobile to desktop
 - ♿ **Accessible** — ARIA-friendly, keyboard navigable, screen reader ready
 - ⚡ **Smooth Transitions** — Buttery animations and hover effects
-- 🎭 **No JavaScript Required** — Pure CSS framework (except theme toggle demo)
+- 🎭 **No JavaScript Required** — Pure CSS framework
 - 🔌 **CDN Ready** — Available via jsDelivr, unpkg, and npm
 - 🎨 **Custom Properties** — Easy to override and customize
 - 📦 **Lightweight** — Only ~15KB minified
 - 🧩 **All HTML Elements** — Covers everything from `<details>` to `<progress>`
+- 🔒 **Apache 2.0 License** — Open source, commercial-friendly
 
 ---
 
@@ -50,4 +52,4 @@
 Add this to your HTML `<head>`:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/YOUR_USERNAME/ultra-good-css/ultra-good.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/glowdown-js/ultra-css/ultra.css">
