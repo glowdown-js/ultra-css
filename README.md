@@ -37,7 +37,7 @@
 - ♿ **Accessible** — ARIA-friendly, keyboard navigable, screen reader ready
 - ⚡ **Smooth Transitions** — Buttery animations and hover effects
 - 🎭 **No JavaScript Required** — Pure CSS framework
-- 🔌 **CDN Ready** — Available via jsDelivr, unpkg, and npm
+- 🔌 **CDN Ready** — Available via jsDelivr, unpkg, and GitHub
 - 🎨 **Custom Properties** — Easy to override and customize
 - 📦 **Lightweight** — Only ~15KB minified
 - 🧩 **All HTML Elements** — Covers everything from `<details>` to `<progress>`
@@ -53,3 +53,4 @@ Add this to your HTML `<head>`:
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/glowdown-js/ultra-css/ultra.css">
+```
