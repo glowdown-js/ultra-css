@@ -1,42 +1,29 @@
-/* ================================================================
-   ULTRA GOOD UI · CLASSLESS CSS FRAMEWORK v2.0
-   – 2000+ lines of pure CSS goodness
-   – Dark/light mode (user-managed via data-theme)
-   – Glassmorphism, smooth transitions, custom properties
-   – Covers ALL semantic HTML elements
-   – Zero classes required
-   ================================================================ */
+input[type="file"] {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--bg-input);
+  border: 2px dashed var(--border-medium);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+  cursor: pointer;
+}
 
-/* ================================================================
-   1. CSS VARIABLES & THEMING
-   ================================================================ */
+input[type="file"]::file-selector-button {
+  padding: 0.5rem 1.5rem;
+  background: var(--accent);
+  color: var(--text-inverse);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 8px var(--accent-glow);
+  cursor: pointer;
+  transition: all var(--transition);
+}
 
-:root {
-  /* ----- Colors (Light) ----- */
-  --bg-page: #f4f6fa;
-  --bg-surface: rgba(255, 255, 255, 0.65);
-  --bg-glass: rgba(255, 255, 255, 0.28);
-  --bg-glass-heavy: rgba(255, 255, 255, 0.45);
-  --bg-input: rgba(255, 255, 255, 0.5);
-  
-  --text-primary: #0b1a2f;
-  --text-secondary: #1f3a5f;
-  --text-muted: #5a6f8c;
-  --text-inverse: #ffffff;
-  
-  --border-soft: rgba(0, 0, 0, 0.08);
-  --border-medium: rgba(0, 0, 0, 0.12);
-  --border-strong: rgba(0, 0, 0, 0.18);
-  
-  --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.04);
-  --shadow-medium: 0 8px 32px rgba(0, 0, 0, 0.08);
-  --shadow-glass: 0 8px 24px rgba(0, 0, 0, 0.06);
-  --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.12);
-  
-  --accent: #3b7cff;
-  --accent-dark: #2a5fd9;
-  --accent-glow: rgba(59, 124, 255, 0.25);
-  --accent-glow-strong: rgba(59, 124, 255, 0.4);
+input[type="file"]::file-selector-button:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px) scale(1.02);
+}  --accent-glow-strong: rgba(59, 124, 255, 0.4);
   
   --success: #22c55e;
   --warning: #eab308;
