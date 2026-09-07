@@ -1,29 +1,42 @@
-input[type="file"] {
-  display: block;
-  width: 100%;
-  padding: 0.8rem;
-  background: var(--bg-input);
-  border: 2px dashed var(--border-medium);
-  border-radius: var(--radius-sm);
-  transition: all var(--transition);
-  cursor: pointer;
-}
+/* ================================================================
+   ULTRA GOOD UI · CLASSLESS CSS FRAMEWORK v1.0.1
+   – Dark/light mode (user-managed via data-theme)
+   – Glassmorphism buttons, cards, inputs
+   – Smooth transitions, custom properties
+   – Zero classes required, pure semantic HTML
+   – File input button styling (NEW in v1.0.1)
+   ================================================================ */
 
-input[type="file"]::file-selector-button {
-  padding: 0.5rem 1.5rem;
-  background: var(--accent);
-  color: var(--text-inverse);
-  border: 1px solid var(--accent);
-  border-radius: var(--radius-pill);
-  box-shadow: 0 2px 8px var(--accent-glow);
-  cursor: pointer;
-  transition: all var(--transition);
-}
+/* ================================================================
+   1. CSS VARIABLES & THEMING
+   ================================================================ */
 
-input[type="file"]::file-selector-button:hover {
-  background: var(--accent-dark);
-  transform: translateY(-2px) scale(1.02);
-}  --accent-glow-strong: rgba(59, 124, 255, 0.4);
+:root {
+  /* ----- Colors (Light) ----- */
+  --bg-page: #f4f6fa;
+  --bg-surface: rgba(255, 255, 255, 0.65);
+  --bg-glass: rgba(255, 255, 255, 0.28);
+  --bg-glass-heavy: rgba(255, 255, 255, 0.45);
+  --bg-input: rgba(255, 255, 255, 0.5);
+  
+  --text-primary: #0b1a2f;
+  --text-secondary: #1f3a5f;
+  --text-muted: #5a6f8c;
+  --text-inverse: #ffffff;
+  
+  --border-soft: rgba(0, 0, 0, 0.08);
+  --border-medium: rgba(0, 0, 0, 0.12);
+  --border-strong: rgba(0, 0, 0, 0.18);
+  
+  --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.04);
+  --shadow-medium: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --shadow-glass: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.12);
+  
+  --accent: #3b7cff;
+  --accent-dark: #2a5fd9;
+  --accent-glow: rgba(59, 124, 255, 0.25);
+  --accent-glow-strong: rgba(59, 124, 255, 0.4);
   
   --success: #22c55e;
   --warning: #eab308;
@@ -449,7 +462,7 @@ label.required::after {
 }
 
 /* ----- Inputs, Textarea, Select ----- */
-input:not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
+input:not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]),
 textarea,
 select {
   width: 100%;
@@ -467,7 +480,7 @@ select {
   margin: 0.5rem 0;
 }
 
-input:not([type="submit"]):not([type="reset"]):not([type="button"]):focus,
+input:not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]):focus,
 textarea:focus,
 select:focus {
   outline: 2px solid var(--accent);
@@ -477,14 +490,125 @@ select:focus {
   box-shadow: 0 0 0 6px var(--accent-glow);
 }
 
-input:not([type="submit"]):not([type="reset"]):not([type="button"]):disabled,
+input:not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]):disabled,
 textarea:disabled,
 select:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-/* ----- Checkbox & Radio ----- */
+/* ================================================================
+   7.1 FILE INPUT (NEW in v1.0.1)
+   ================================================================ */
+
+input[type="file"] {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  font-family: var(--font);
+  font-size: 1rem;
+  background: var(--bg-input);
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  border: 2px dashed var(--border-medium);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  transition: all var(--transition);
+  cursor: pointer;
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+input[type="file"]:hover {
+  border-color: var(--accent);
+  background: var(--bg-surface);
+  box-shadow: 0 0 0 4px var(--accent-glow);
+}
+
+input[type="file"]:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-color: var(--accent);
+  background: var(--bg-surface);
+  box-shadow: 0 0 0 6px var(--accent-glow);
+}
+
+input[type="file"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* File input button (the actual "Choose File" button) */
+input[type="file"]::file-selector-button {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  font-family: var(--font);
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--text-inverse);
+  background: var(--accent);
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 8px var(--accent-glow);
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-right: 1rem;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  box-shadow: 0 4px 16px var(--accent-glow-strong);
+  transform: translateY(-2px) scale(1.02);
+}
+
+input[type="file"]::file-selector-button:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 8px var(--accent-glow);
+}
+
+/* File input - selected filename styling */
+input[type="file"]:valid {
+  border-color: var(--success);
+  border-style: solid;
+}
+
+input[type="file"]:valid::file-selector-button {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+input[type="file"]:valid::file-selector-button:hover {
+  background: var(--success);
+  filter: brightness(1.1);
+}
+
+/* Dark mode file input */
+[data-theme="dark"] input[type="file"]::file-selector-button {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+[data-theme="dark"] input[type="file"]::file-selector-button:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+/* File input with icon */
+input[type="file"]::before {
+  content: '📎 ';
+  font-size: 1.1rem;
+  margin-right: 0.25rem;
+}
+
+/* ================================================================
+   7.2 CHECKBOX & RADIO
+   ================================================================ */
+
 input[type="checkbox"],
 input[type="radio"] {
   width: auto;
@@ -500,7 +624,10 @@ input[type="radio"]:focus {
   outline-offset: 2px;
 }
 
-/* ----- Range slider ----- */
+/* ================================================================
+   7.3 RANGE SLIDER
+   ================================================================ */
+
 input[type="range"] {
   width: 100%;
   height: 6px;
@@ -531,20 +658,6 @@ input[type="range"]::-moz-range-thumb {
   background: var(--accent);
   cursor: pointer;
   border: none;
-}
-
-/* ----- File input ----- */
-input[type="file"] {
-  padding: 0.8rem;
-  background: var(--bg-glass);
-  border: 2px dashed var(--border-medium);
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: all var(--transition);
-}
-input[type="file"]:hover {
-  border-color: var(--accent);
-  background: var(--bg-surface);
 }
 
 /* ================================================================
@@ -663,13 +776,6 @@ pre code {
   color: var(--text-secondary);
   display: block;
 }
-
-/* ----- Syntax highlighting (basic) ----- */
-pre .comment { color: var(--text-muted); }
-pre .keyword { color: var(--accent); font-weight: 600; }
-pre .string { color: var(--success); }
-pre .number { color: var(--warning); }
-pre .function { color: var(--info); }
 
 /* ================================================================
    11. TABLES
@@ -1268,5 +1374,5 @@ time {
 }
 
 /* ================================================================
-   END OF FRAMEWORK
+   END OF FRAMEWORK v1.0.1
    ================================================================ */
